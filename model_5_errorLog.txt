@@ -1,0 +1,118 @@
+#############################################
+#											#
+#	Error log message						#
+#											#
+#############################################
+
+127.0.0.1 - - [14/Jul/2017 13:27:53] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 3704 0.045033
+(332) accepted ('127.0.0.1', 59658)
+connect  22f6887c5c1647b691d214c9582f3f04
+Traceback (most recent call last):
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\eventlet\wsgi.py", line 507, in handle_one_response
+    result = self.application(self.environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\server.py", line 252, in handle_request
+    transport, b64)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\server.py", line 374, in _handle_connect
+    ret = s.handle_get_request(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 89, in handle_get_request
+    start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 136, in _upgrade_websocket
+    return ws(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\async_eventlet.py", line 19, in __call__
+    return super(WebSocketWSGI, self).__call__(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\eventlet\websocket.py", line 127, in __call__
+    self.handler(ws)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 230, in _websocket_handler
+    raise reraise_exc
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 216, in _websocket_handler
+    self.receive(pkt)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 56, in receive
+    async=self.server.async_handlers)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\server.py", line 401, in _trigger_event
+    return self.handlers[event](*args)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 513, in _handle_eio_message
+    self._handle_event(sid, pkt.namespace, pkt.id, pkt.data)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 449, in _handle_event
+    self._handle_event_internal(self, sid, data, namespace, id)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 452, in _handle_event_internal
+    r = server._trigger_event(data[0], namespace, sid, *data[1:])
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "drive.py", line 67, in telemetry
+    steering_angle = float(model.predict(image_array[None, :, :, :], batch_size=1))
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\keras\models.py", line 724, in predict
+    return self.model.predict(x, batch_size=batch_size, verbose=verbose)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\keras\engine\training.py", line 1250, in predict
+    check_batch_axis=False)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\keras\engine\training.py", line 124, in standardize_input_data
+    str(array.shape))
+ValueError: Error when checking : expected cropping2d_input_1 to have shape (None, 160, 320, 1) but got array with shape (1, 160, 320, 3
+)
+
+127.0.0.1 - - [14/Jul/2017 13:27:53] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 3704 0.048034
+(332) accepted ('127.0.0.1', 59659)
+connect  53bbbbe0b11445e2a30859ccc9f4a236
+Traceback (most recent call last):
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\eventlet\wsgi.py", line 507, in handle_one_response
+    result = self.application(self.environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 353, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\server.py", line 252, in handle_request
+    transport, b64)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\server.py", line 374, in _handle_connect
+    ret = s.handle_get_request(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 89, in handle_get_request
+    start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 136, in _upgrade_websocket
+    return ws(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\async_eventlet.py", line 19, in __call__
+    return super(WebSocketWSGI, self).__call__(environ, start_response)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\eventlet\websocket.py", line 127, in __call__
+    self.handler(ws)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 230, in _websocket_handler
+    raise reraise_exc
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 216, in _websocket_handler
+    self.receive(pkt)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\socket.py", line 56, in receive
+    async=self.server.async_handlers)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\engineio\server.py", line 401, in _trigger_event
+    return self.handlers[event](*args)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 513, in _handle_eio_message
+    self._handle_event(sid, pkt.namespace, pkt.id, pkt.data)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 449, in _handle_event
+    self._handle_event_internal(self, sid, data, namespace, id)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 452, in _handle_event_internal
+    r = server._trigger_event(data[0], namespace, sid, *data[1:])
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\socketio\server.py", line 481, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "drive.py", line 67, in telemetry
+    steering_angle = float(model.predict(image_array[None, :, :, :], batch_size=1))
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\keras\models.py", line 724, in predict
+    return self.model.predict(x, batch_size=batch_size, verbose=verbose)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\keras\engine\training.py", line 1250, in predict
+    check_batch_axis=False)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\keras\engine\training.py", line 124, in standardize_input_data
+    str(array.shape))
+ValueError: Error when checking : expected cropping2d_input_1 to have shape (None, 160, 320, 1) but got array with shape (1, 160, 320, 3
+)
+
+127.0.0.1 - - [14/Jul/2017 13:27:53] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 3704 0.047536
+(332) accepted ('127.0.0.1', 59660)
+(332) accepted ('127.0.0.1', 59660)
+(332) wsgi exited, is_accepting=True
+Traceback (most recent call last):
+  File "drive.py", line 142, in <module>
+    eventlet.wsgi.server(eventlet.listen(('', 4567)), app)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\eventlet\wsgi.py", line 899, in server
+    serv.pid, client_socket[1]))
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\eventlet\wsgi.py", line 284, in debug
+    self.write(msg, *args)
+  File "C:\Users\Luis\Miniconda3\envs\carnd-term1\lib\site-packages\eventlet\wsgi.py", line 290, in write
+    self.log.write(msg)
+OSError: raw write() returned invalid length 74 (should have been between 0 and 37)
